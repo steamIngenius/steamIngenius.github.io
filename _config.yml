@@ -3,7 +3,7 @@ title: Micah Hawkins | WebDev
 email: micahbhawkins@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This site is dedicated to topics I'm interested in exploring and will serve as a 
-  tool for solidifying knowledge I have required and a reference for future projects.
+  tool for solidifying knowledge I have acquired and a reference for future projects.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://steamingenius.github.io" # the base hostname & protocol for your site
 twitter_username: micah_hawkins
