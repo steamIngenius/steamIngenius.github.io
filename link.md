@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Link
-permalink: /Link/
+permalink: /Permalink/
 ---
 
 HI!
