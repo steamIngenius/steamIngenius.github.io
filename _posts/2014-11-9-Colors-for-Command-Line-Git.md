@@ -23,7 +23,7 @@ Some of the following configurations will require you to add to a file called .b
 - Create a new file named .bash_profile `touch .bash_profile [ENTER]`
 - Use `ls -a`, which shows hidden files, to confirm your file has been created.
 
-Alternatively, you can download an example bash profile by clicking [here.]({{ site.url }}/_downloads/bash_profile_example)
+Alternatively, you can download an example bash profile by clicking [here.]({{ site.url }}/downloads/bash_profile_example)
 Move the file to your home directory and rename it to .bash_profile, including the period at the beginning.
 If you already have a .bash_profile, you don’t need to create a new one. You can add the content from the example bash profile if you would like.
 
