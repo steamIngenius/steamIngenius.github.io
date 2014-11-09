@@ -7,6 +7,7 @@ categories: git hacking programming
 Using **git** from the command is great, but with out-of-the-box settings it can be more of a chore and harder on your eyes than it needs to be. In this post we'll present some tricks that will make command line git more efficient and ejoyable.
 
 
+
 ### **Step 1: Create a .bash_profile**
 
 Some of the following configurations will require you to add to a file called .bash_profile, which is used to configure Git Bash if you’re using Windows, or the terminal if you’re using Mac or Linux. (If your terminal is using a different shell than bash, than many of the following instructions will not work. However, bash is the default on both Mac and Ubuntu.) Note: Since this file has a period at the beginning of its name, it is called a hidden file and will not appear in most file system navigators. To create this file:
@@ -15,9 +16,7 @@ Some of the following configurations will require you to add to a file called .b
 - Create a new file named .bash_profile `touch .bash_profile [ENTER]`
 - Use `ls -a`, which shows hidden files, to confirm your file has been created.
 
-Alternatively, if you're interested, you can use the .bash_profile we used when filming this course. To do so:
-
-Download bash_profile_course from the Downloadables section.
+Alternatively, you can download an example .bash_profile by clicking [here.]({{ site.url }}/_downloads/bash_profile_example)
 Move the file to your home directory.
 Rename the file to .bash_profile, including the period at the beginning.
 If you already have a .bash_profile, you don’t need to create a new one. You can add the content from the example .bash_profile if you would like.
