@@ -4,7 +4,7 @@ title:  "Cleaning up stale git refs for fun and profit."
 date:   2016-10-07 16:24:40
 categories: git
 ---
-So you go to pull in changes from a remote repository and it gets stuck trying to `git pull`.
+So you `git fetch` some changes from a remote repository and it gets stuck trying to `git pull`. 
 
 {% highlight shell %}
 [project] git pull
@@ -14,20 +14,34 @@ From ssh://repo.company.com:7999/~user/project
  ! 01bee15..4799efd  feature-branch -> origin/feature-branch  (unable to update local ref)
  {% endhighlight %}
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+This happens to me with stash somewhat regularly and I end up running these two commands to clean up refrences on the local and remote.
 
-Jekyll also offers powerful support for code snippets:
+{% highlight shell %}
+[project] git gc --prune=now
+Counting objects: 90724, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (33738/33738), done.
+Writing objects: 100% (90724/90724), done.
+Total 90724 (delta 50066), reused 89191 (delta 48831)
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+[project] git remote prune origin
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll’s dedicated Help repository][jekyll-help].
+Now that everything is nice and clean, `git pull` should work like new again.
 
-[jekyll]:      http://jekyllrb.com
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-help]: https://github.com/jekyll/jekyll-help
+{% highlight shell %}
+[project] git pull
+From ssh://repo.company.com:7999/~user/project
+   01bee15..4799efd  feature-branch -> origin/feature-branch
+Updating 88b7cb1..fce7d93
+Fast-forward
+ file.extension                                    |    132 +-
+ file.extension                                    |      2 +-
+ client-app/.babelrc                               |      2 +-
+ client-app/.eslintrc                              |     21 +-
+ ...
+{% endhighlight %}
+
+Mmm, new repo smell. See the issue on [Stack Overflow][so-page] for more information.
+[so-page]:  http://stackoverflow.com/a/7348934
+
