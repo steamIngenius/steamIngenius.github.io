@@ -43,5 +43,6 @@ Fast-forward
 {% endhighlight %}
 
 Mmm, new repo smell. See the issue on [Stack Overflow][so-page] for more information.
+
 [so-page]:  http://stackoverflow.com/a/7348934
 
